@@ -26,6 +26,7 @@
 
   home.packages = with pkgs; [
     glow
+	btop
   ];
 
   # Git
