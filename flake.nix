@@ -56,6 +56,7 @@
           globalModules
           ++ [
             {networking.hostName = "wx-001";}
+			{ environment.systemPackages = [ inputs.agenix.packages."x86_64-linux".default]; }
             "${self}/machines/wx-001"
             "${self}/modules/i3"
             "${self}/modules/tailscale"
@@ -69,6 +70,7 @@
           globalModules
           ++ [
             {wsl.wslConf.network.hostname = "IEL-100123";}
+			{ environment.systemPackages = [ inputs.agenix.packages."x86_64-linux".default]; }
             nixos-wsl.nixosModules.default
             "${self}/machines/iel-100123"
             "${self}/modules/devops"
@@ -81,6 +83,7 @@
           globalModules
           ++ [
             {networking.hostName = "soft-serve";}
+			{ environment.systemPackages = [ inputs.agenix.packages."x86_64-linux".default]; }
             "${self}/machines/lxc"
             "${self}/modules/soft-serve"
           ];
@@ -91,6 +94,7 @@
           globalModules
           ++ [
             {networking.hostName = "rproxy";}
+			{ environment.systemPackages = [ inputs.agenix.packages."x86_64-linux".default]; }
             "${self}/machines/lxc"
             "${self}/modules/rproxy"
           ];
@@ -101,6 +105,7 @@
           globalModules
           ++ [
             {networking.hostName = "web1";}
+			{ environment.systemPackages = [ inputs.agenix.packages."x86_64-linux".default]; }
             "${self}/machines/lxc"
             "${self}/modules/5etools"
           ];
