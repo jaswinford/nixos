@@ -4,9 +4,7 @@ let
 
   Freyr = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFh6Zsb31NHYk8WhJ7W9CmCBGQOP4/jiAMLMn/SuuxqU root@Freyr";
   IEL-100123 = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILK/Lgc17htGdHHVDvSo42H83uhdTmVTTMPg7aoO3oEQ root@IEL-100123";
-
-in
-{
-  "wireless-keys.age".publicKeys = [ adam-Freyr Freyr ];
-  "openai_api_key.age".publicKeys = [ adam-Freyr adam-IEL Freyr IEL-100123];
+in {
+  "wireless-keys.age".publicKeys = [adam-Freyr Freyr];
+  "openai_api_key.age".publicKeys = [adam-Freyr adam-IEL Freyr IEL-100123];
 }

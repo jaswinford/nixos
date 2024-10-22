@@ -6,7 +6,6 @@
   home-manager,
   ...
 }: {
-
   boot.tmp.useTmpfs = true;
   boot.loader.systemd-boot.configurationLimit = 5;
 
@@ -61,10 +60,10 @@
 
   services.openssh = {
     enable = true;
-	settings = {
-	  PasswordAuthentication = false;
-	  UseDns = true;
-	  PermitRootLogin = "prohibit-password";
+    settings = {
+      PasswordAuthentication = false;
+      UseDns = true;
+      PermitRootLogin = "prohibit-password";
     };
   };
 

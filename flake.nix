@@ -8,7 +8,7 @@
     home-manager.url = "github:nix-community/home-manager";
     stylix.url = "github:danth/stylix";
     nixos-wsl.url = "github:nix-community/nixos-wsl";
-	agenix.url = "github:ryantm/agenix";
+    agenix.url = "github:ryantm/agenix";
   };
 
   outputs = {
@@ -16,7 +16,7 @@
     home-manager,
     nixpkgs,
     stylix,
-	agenix,
+    agenix,
     nixos-wsl,
     ...
   } @ inputs: let
@@ -24,7 +24,7 @@
       {system.configurationRevision = self.rev or self.dirtyRev or null;}
       stylix.nixosModules.stylix
       home-manager.nixosModules.home-manager
-	  agenix.nixosModules.default
+      agenix.nixosModules.default
       ./modules/global/global.nix
       ./modules/stylix
       ./modules/neovim
@@ -43,7 +43,7 @@
           globalModules
           ++ [
             {networking.hostName = "Freyr";}
-			{ environment.systemPackages = [ inputs.agenix.packages."x86_64-linux".default]; }
+            {environment.systemPackages = [inputs.agenix.packages."x86_64-linux".default];}
             "${self}/machines/freyr"
             "${self}/modules/i3"
             "${self}/modules/wireless"
@@ -56,11 +56,11 @@
           globalModules
           ++ [
             {networking.hostName = "wx-001";}
-			{ environment.systemPackages = [ inputs.agenix.packages."x86_64-linux".default]; }
+            {environment.systemPackages = [inputs.agenix.packages."x86_64-linux".default];}
             "${self}/machines/wx-001"
             "${self}/modules/i3"
             "${self}/modules/tailscale"
-			"${self}/modules/sunshine"
+            "${self}/modules/sunshine"
           ];
       };
       # Work WSL instance
@@ -70,7 +70,7 @@
           globalModules
           ++ [
             {wsl.wslConf.network.hostname = "IEL-100123";}
-			{ environment.systemPackages = [ inputs.agenix.packages."x86_64-linux".default]; }
+            {environment.systemPackages = [inputs.agenix.packages."x86_64-linux".default];}
             nixos-wsl.nixosModules.default
             "${self}/machines/iel-100123"
             "${self}/modules/devops"
@@ -83,7 +83,7 @@
           globalModules
           ++ [
             {networking.hostName = "soft-serve";}
-			{ environment.systemPackages = [ inputs.agenix.packages."x86_64-linux".default]; }
+            {environment.systemPackages = [inputs.agenix.packages."x86_64-linux".default];}
             "${self}/machines/lxc"
             "${self}/modules/soft-serve"
           ];
@@ -94,7 +94,7 @@
           globalModules
           ++ [
             {networking.hostName = "rproxy";}
-			{ environment.systemPackages = [ inputs.agenix.packages."x86_64-linux".default]; }
+            {environment.systemPackages = [inputs.agenix.packages."x86_64-linux".default];}
             "${self}/machines/lxc"
             "${self}/modules/rproxy"
           ];
@@ -105,7 +105,7 @@
           globalModules
           ++ [
             {networking.hostName = "web1";}
-			{ environment.systemPackages = [ inputs.agenix.packages."x86_64-linux".default]; }
+            {environment.systemPackages = [inputs.agenix.packages."x86_64-linux".default];}
             "${self}/machines/lxc"
             "${self}/modules/5etools"
           ];

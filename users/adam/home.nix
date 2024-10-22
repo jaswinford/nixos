@@ -26,7 +26,7 @@
 
   home.packages = with pkgs; [
     glow
-	btop
+    btop
   ];
 
   # Git
@@ -94,25 +94,24 @@
       nvim-navic
       bufferline-nvim
       telescope-nvim
-	  {
-	    plugin =obsidian-nvim;
-		type = "lua";
-		config = ''
-require("obsidian").setup({
-  workspaces = {
-    {
-	  name = "personal",
-	  path = "~/vaults/personal",
-    },
-	{
-	  name = "work",
-	  path = "~/vaults/work",
-    },
-  },
-})
-		'';
-		}
-
+      {
+        plugin = obsidian-nvim;
+        type = "lua";
+        config = ''
+          require("obsidian").setup({
+            workspaces = {
+              {
+          	  name = "personal",
+          	  path = "~/vaults/personal",
+              },
+          	{
+          	  name = "work",
+          	  path = "~/vaults/work",
+              },
+            },
+          })
+        '';
+      }
     ];
   };
 
