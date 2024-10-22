@@ -93,10 +93,26 @@
       lualine-nvim
       nvim-navic
       bufferline-nvim
-      toggleterm-nvim
       telescope-nvim
-      todo-comments-nvim
-      vimwiki
+	  {
+	    plugin =obsidian-nvim;
+		type = "lua";
+		config = ''
+require("obsidian").setup({
+  workspaces = {
+    {
+	  name = "personal",
+	  path = "~/vaults/personal",
+    },
+	{
+	  name = "work",
+	  path = "~/vaults/work",
+    },
+  },
+})
+		'';
+		}
+
     ];
   };
 
