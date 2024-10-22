@@ -8,4 +8,5 @@ let
 in
 {
   "wireless-keys.age".publicKeys = [ adam-Freyr Freyr ];
+  "openai_api_key.age".publicKeys = [ adam-Freyr adam-IEL Freyr IEL-100123];
 }
