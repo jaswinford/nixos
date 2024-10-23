@@ -13,6 +13,7 @@
   programs.zsh = {
     enable = true;
     shellAliases = {
+	  open = "xdg-open";
       k = "kubectl";
     };
     oh-my-zsh = {
@@ -52,6 +53,9 @@
 
   programs.alacritty = {
     enable = true;
+	settings = {
+	  selection.save_to_clipboard = true;
+    };
   };
 
   programs.tmux = {

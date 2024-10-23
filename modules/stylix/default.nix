@@ -29,10 +29,10 @@
       name = "Noto Color Emoji";
     };
     sizes = {
-      applications = 11;
-      desktop = 11;
-      popups = 11;
-      terminal = 11;
+      applications = 8;
+      desktop = 8;
+      popups = 8;
+      terminal = 8;
     };
   };
   stylix.image = pkgs.fetchurl {
