@@ -25,7 +25,7 @@
   };
 
   networking.wireless.networks."LAN Down Under" = {
-    pskRAW = "ext:psk_LANDownUnder";
+    pskRaw = "ext:psk_LANDownUnder";
   };
   networking.wireless.networks.CCTMBHM = {
     pskRaw = "ext:psk_CCTMBHM";
