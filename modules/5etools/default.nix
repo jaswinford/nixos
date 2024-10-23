@@ -2,7 +2,9 @@
   pkgs,
   modulesPath,
   ...
-}: {
+}: let
+  repo-5etools = "https://github.com/5etools-mirror-3/5etools-src.git";
+in {
   networking.firewall.allowedTCPPorts = [
     80
   ];
