@@ -35,4 +35,7 @@
     pskRaw = "ext:psk_Ragnarok";
     priority = 100;
   };
+  networking.wireless.networks.IEL-Guest = {
+    priority = -100;
+  };
 }
