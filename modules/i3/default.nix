@@ -17,6 +17,7 @@
         i3blocks
         alacritty
         google-chrome
+        xclip
       ];
     };
   };
