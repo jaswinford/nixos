@@ -242,6 +242,20 @@
     ];
   };
 
+  programs.emacs = {
+    enable = true;
+    extraConfig = ''
+    (require 'evil)
+    (evil-mode 1)
+    '';
+    extraPackages = epkgs: [
+      epkgs.evil
+      epkgs.evil-org
+      epkgs.org
+      epkgs.evil-markdown
+    ];
+  };
+
   # GPG
   programs.gpg = {
     enable = true;
