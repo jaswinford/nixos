@@ -21,6 +21,7 @@
     ];
     packages = with pkgs; [
       texliveFull
+      rclone
     ];
   };
   programs.zsh.enable = true;
