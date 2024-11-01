@@ -26,6 +26,7 @@
   };
 
   home.packages = with pkgs; [
+    ripgrep-all
     glow
     btop
   ];
@@ -220,6 +221,11 @@
       lualine-nvim
       nvim-navic
       bufferline-nvim
+      {
+        plugin = todo-comments-nvim;
+        type = "lua";
+        config = ''require('todo-comments').setup({})'';
+      }
       telescope-nvim
       {
         plugin = obsidian-nvim;
@@ -245,8 +251,8 @@
   programs.emacs = {
     enable = true;
     extraConfig = ''
-    (require 'evil)
-    (evil-mode 1)
+      (require 'evil)
+      (evil-mode 1)
     '';
     extraPackages = epkgs: [
       epkgs.evil

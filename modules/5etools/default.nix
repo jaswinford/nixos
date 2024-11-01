@@ -2,7 +2,7 @@
   pkgs,
   modulesPath,
   ...
-}:{
+}: {
   networking.firewall.allowedTCPPorts = [
     80
   ];
