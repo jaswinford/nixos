@@ -36,41 +36,6 @@
     ignores = [
       "!.gitignore"
     ];
-    languages = {
-      language = [
-        #{
-        #  name = "rust";
-        #  scope = "source.rust";
-        #  auto-format = true;
-        #}
-        #{
-        #  name = "go";
-        #  scope = "source.go";
-        #  auto-format = true;
-        #}
-        #{
-        #  name = "json";
-        #  scope = "source.json";
-        #  auto-format = true;
-        # }
-        {
-          name = "markdown";
-          scope = "source.markdown";
-          file-types = ["md"];
-          auto-format = true;
-        }
-        # {
-        # name = "shellscript";
-        # scope = "source.shellscript";
-        # auto-format = true;
-        # }
-        # {
-        # name = "yaml";
-        # scope = "source.yaml";
-        # auto-format = true;
-        # }
-      ];
-    };
   };
 
   # Git
