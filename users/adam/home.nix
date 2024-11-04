@@ -31,6 +31,47 @@
     btop
   ];
 
+  programs.helix = {
+    enable = true;
+    ignores = [
+      "!.gitignore"
+    ];
+    languages = {
+      language = [
+        {
+          name = "rust";
+          scope = "source.rust";
+          auto-format = true;
+        }
+        {
+          name = "go";
+          scope = "source.go";
+          auto-format = true;
+        }
+        {
+          name = "json";
+          scope = "source.json";
+          auto-format = true;
+        }
+        {
+          name = "markdown";
+          scope = "source.markdown";
+          auto-format = true;
+        }
+        {
+          name = "shellscript";
+          scope = "source.shellscript";
+          auto-format = true;
+        }
+        {
+          name = "yaml";
+          scope = "source.yaml";
+          auto-format = true;
+        }
+      ];
+    };
+  };
+
   # Git
   programs.git = {
     enable = true;
