@@ -40,5 +40,5 @@
     sha256 = "d742efdb9574446d269f0fcef740de55c84235625b764b54003b6e23e7a71303";
   };
   stylix.polarity = "dark";
-  stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-hard.yaml";
+  stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/spaceduck.yaml";
 }
