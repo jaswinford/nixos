@@ -74,6 +74,7 @@
             nixos-wsl.nixosModules.default
             "${self}/machines/iel-100123"
             "${self}/modules/devops"
+            "${self}/modules/tailscale"
           ];
       };
       # Servers
