@@ -61,7 +61,7 @@
   networking.nat = {
     enable = true;
     internalInterfaces = ["ve-+"];
-    exteranlInterfaces = "enp3s0";
+    externalInterfaces = "enp3s0";
     enableIPv6 = true;
   };
   
