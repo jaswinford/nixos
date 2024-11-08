@@ -70,6 +70,11 @@
       // {
         locations."/".proxyPass = "http://10.0.1.5:8222";
       };
+    "nextcloud.jadam.space" =
+     SSL
+    // {
+      locations."/".proxyPass = "http://10.0.1.20";
+    };
     "pve.jadam.space" =
       SSL
       // {
