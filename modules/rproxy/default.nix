@@ -14,6 +14,8 @@
   };
 
   services.nginx.enable = true;
+  services.nginx.clientMaxBodySize = "5g";
+  services.nginx.recommendedGzipSettings = true;
   services.nginx.virtualHosts = let
     SSL = {
       enableACME = true;
