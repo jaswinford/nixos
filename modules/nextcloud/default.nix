@@ -16,14 +16,14 @@
           overwriteprotocol = "https";
           trusted_domains = ["localhost"];
         };
-        database.createLocally = true;
+#        database.createLocally = true;
         config = {
           adminuser = "root";
           adminpassFile = "${pkgs.writeText "adminpass" "test123"}";
         #  dbtype = "pgsql";
         };
-        notify_push = {
-          enable = true;
-        };
+#        notify_push = {
+#          enable = true;
+#        };
       };
 }
