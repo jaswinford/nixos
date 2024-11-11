@@ -44,9 +44,8 @@
           dbname = "nextcloud";
           dbhost = "/run/postgresql";
         };
-        notify_push = {
-          enable = true;
-          
-        };
+        # notify_push = {
+          # enable = true;
+        # };
       };
 }
