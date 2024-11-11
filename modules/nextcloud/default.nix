@@ -6,6 +6,12 @@
         };
       };
 
+      environment.systemPackages = with pkgs; [
+
+        exiftool
+        ffmpeg_6-headless
+      ];
+
       services.postgresql = {
         enable = true;
         ensureUsers = [
