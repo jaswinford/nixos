@@ -12,6 +12,10 @@
         ffmpeg_6-headless
       ];
 
+      services.onlyoffice = {
+        enable = true;
+      };
+
       services.postgresql = {
         enable = true;
         ensureUsers = [
@@ -19,9 +23,14 @@
             name = "nextcloud";
             ensureDBOwnership = true;
           }
+          {
+            name = "onlyoffice";
+            ensureDBOwnership = true;
+          }
         ];      
         ensureDatabases = [
           "nextcloud"
+          "onlyoffice"
         ];
       };
 
