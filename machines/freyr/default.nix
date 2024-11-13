@@ -48,24 +48,24 @@
   networking.dhcpcd.enable = true;
 
   # Enable Steam
-  programs.steam = {
-    enable = true;
-    remotePlay.openFirewall = true;
-    dedicatedServer.openFirewall = true;
-  };
+  # programs.steam = {
+    # enable = true;
+    # remotePlay.openFirewall = true;
+    # dedicatedServer.openFirewall = true;
+  # };
 
   # System packages
   environment.systemPackages = with pkgs; [
-    discord
-    moonlight-qt
+    # discord
+    # moonlight-qt
     pavucontrol
     light
     sof-firmware
     linux-firmware
-    go
-    gopls
-    python3
-    adwaita-icon-theme
+    # go
+    # gopls
+    # python3
+    # adwaita-icon-theme
   ];
 
   # Ignore laptop lid
