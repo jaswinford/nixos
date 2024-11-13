@@ -38,4 +38,7 @@
   networking.wireless.networks.IEL-Guest = {
     priority = -100;
   };
+  networking.wireless.networks.Thor = {
+    pskRaw = "ext:psk_Thor";
+  };
 }
