@@ -85,12 +85,12 @@
           proxy_set_header X-Forwarded-Host $http_host;
           proxy_buffering off;'';
     };
-    "pve.jadam.space" =
-      SSL
-      // {
-        locations."/".proxyPass = "https://10.0.1.6:8006";
-        locations."/".proxyWebsockets = true;
-      };
+    # "pve.jadam.space" =
+      # SSL
+      # // {
+        # locations."/".proxyPass = "https://10.0.1.6:8006";
+        # locations."/".proxyWebsockets = true;
+      # };
     "5etools.jadam.space" =
       SSL
       // {
