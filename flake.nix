@@ -120,6 +120,7 @@
             {environment.systemPackages = [inputs.agenix.packages."x86_64-linux".default];}
             "${self}/machines/lxc"
             "${self}/modules/silverbullet"
+            "${self}/modules/tailscale"
           ];
       };
       web1 = inputs.nixpkgs.lib.nixosSystem {
