@@ -70,6 +70,7 @@
           globalModules
           ++ [
             {wsl.wslConf.network.hostname = "IEL-100123";}
+            {networking.interfaces.eth0.mtu = 1000;}
             {environment.systemPackages = [inputs.agenix.packages."x86_64-linux".default];}
             nixos-wsl.nixosModules.default
             "${self}/machines/iel-100123"
