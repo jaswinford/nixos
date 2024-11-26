@@ -76,6 +76,7 @@
             "${self}/machines/iel-100123"
             "${self}/modules/devops"
             "${self}/modules/tailscale"
+            "${self}/modules/workstation"
           ];
       };
       # Servers
