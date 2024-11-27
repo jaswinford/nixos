@@ -13,6 +13,12 @@
   #  zfs rollback -r rpool/local/root@blank
   #'';
 
+  age.secrets.syncthing-key = {
+    file = ../../secrets/legion.syncthing.key.age;
+  };
+  age.secrets.syncthing-cert = {
+    file = ../../secrets/legion.syncthing.cert.age;
+  };
   networking.hostId = "4a13754f";
 
   hardware.graphics = {
