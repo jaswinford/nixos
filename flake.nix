@@ -25,6 +25,7 @@
       stylix.nixosModules.stylix
       home-manager.nixosModules.home-manager
       agenix.nixosModules.default
+      ./modules/syncthing
       ./modules/global/global.nix
       ./modules/stylix
       ./modules/neovim

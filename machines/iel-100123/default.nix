@@ -9,6 +9,12 @@
   pkgs,
   ...
 }: {
+  age.secrets.syncthing-key = {
+    file = ../../secrets/IEL-100123.syncthing.key.age;
+  };
+  age.secrets.syncthing-cert = {
+    file = ../../secrets/IEL-100123.syncthing.cert.age;
+  };
   wsl.enable = true;
   wsl.defaultUser = "adam";
   wsl.wslConf.network.generateResolvConf = false;
@@ -33,4 +39,8 @@
   };
 
   system.stateVersion = "24.05"; # Did you read the comment?
+  # services.syncthing = {
+    # key = "${config.age.secrets.syncthing-key.path}";
+    # cert = "${config.age.secrets.syncthing-cert.path}";
+  # };
 }
