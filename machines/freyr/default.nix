@@ -19,6 +19,9 @@
   hardware.bluetooth.powerOnBoot = true;
   services.blueman.enable = true;
 
+  hardware.sane.enable = true;
+  hardware.sane.brscan5.enable = true;
+
   hardware.graphics = {
     enable = true;
     extraPackages = with pkgs; [
@@ -58,6 +61,8 @@
   environment.systemPackages = with pkgs; [
     # discord
     # moonlight-qt
+    naps2
+    brscan5
     pavucontrol
     light
     sof-firmware
