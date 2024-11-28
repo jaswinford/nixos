@@ -20,7 +20,6 @@
       "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEr4r4RDBqu4J/M/KOGKN4nDnvFB3Ve5jir9jlnws7Pc adam@wx-nixos"
     ];
     packages = with pkgs; [
-      texliveFull
       rclone
     ];
   };

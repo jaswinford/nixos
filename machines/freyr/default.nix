@@ -11,6 +11,13 @@
   imports = [
     ./hardware.nix
   ];
+
+  age.secrets.syncthing-key = {
+    file = ../../secrets/freyr.syncthing.key.age;
+  };
+  age.secrets.syncthing-cert = {
+    file = ../../secrets/freyr.syncthing.cert.age;
+  };
   networking.hostId = "cea75a76";
 
   services.getty.autologinUser = "adam";

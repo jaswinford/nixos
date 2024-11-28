@@ -21,7 +21,6 @@
     gopass
     libnotify
     alejandra
-    pandoc
     wget
     curl
     dig

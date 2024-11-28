@@ -25,6 +25,7 @@
       stylix.nixosModules.stylix
       home-manager.nixosModules.home-manager
       agenix.nixosModules.default
+      ./modules/syncthing
       ./modules/global/global.nix
       ./modules/stylix
       ./modules/neovim
@@ -70,11 +71,13 @@
           globalModules
           ++ [
             {wsl.wslConf.network.hostname = "IEL-100123";}
+            {networking.interfaces.eth0.mtu = 1000;}
             {environment.systemPackages = [inputs.agenix.packages."x86_64-linux".default];}
             nixos-wsl.nixosModules.default
             "${self}/machines/iel-100123"
             "${self}/modules/devops"
             "${self}/modules/tailscale"
+            "${self}/modules/workstation"
           ];
       };
       # Servers
@@ -109,6 +112,18 @@
             {environment.systemPackages = [inputs.agenix.packages."x86_64-linux".default];}
             "${self}/machines/lxc"
             "${self}/modules/rproxy"
+          ];
+      };
+      silverbullet = inputs.nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        modules =
+          globalModules
+          ++ [
+            {networking.hostName = "silverbullet";}
+            {environment.systemPackages = [inputs.agenix.packages."x86_64-linux".default];}
+            "${self}/machines/lxc"
+            "${self}/modules/silverbullet"
+            "${self}/modules/tailscale"
           ];
       };
       web1 = inputs.nixpkgs.lib.nixosSystem {
