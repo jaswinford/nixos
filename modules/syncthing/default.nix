@@ -38,7 +38,7 @@
         };
         Freyr = {
           id = "ZKQLFXV-TEIG4DH-JXE4SD3-OXQUMKO-HEQA6E4-JZ5IMMN-DWPYFZJ-RTH5QAN";
-          address = [
+          addresses = [
             "tcp://100.109.149.117:22000"
           ];
         };
