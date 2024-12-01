@@ -139,6 +139,17 @@
             "${self}/modules/5etools"
           ];
       };
+       aria = inputs.nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        modules =
+          globalModules
+          ++ [
+            {networking.hostName = "aria";}
+            {environment.systemPackages = [inputs.agenix.packages."x86_64-linux".default];}
+            "${self}/machines/lxc"
+            "${self}/modules/aria2"
+          ];
+      };
     };
   };
 }
