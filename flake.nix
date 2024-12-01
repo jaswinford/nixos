@@ -49,6 +49,7 @@
             "${self}/modules/i3"
             "${self}/modules/wireless"
             "${self}/modules/tailscale"
+            "${self}/modules/workstation"
           ];
       };
       wx-001 = inputs.nixpkgs.lib.nixosSystem {
@@ -62,6 +63,7 @@
             "${self}/modules/i3"
             "${self}/modules/tailscale"
             "${self}/modules/sunshine"
+            "${self}/modules/workstation"
           ];
       };
       # Work WSL instance
