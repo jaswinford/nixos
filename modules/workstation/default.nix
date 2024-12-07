@@ -6,7 +6,9 @@
 }: {
 
 environment.systemPackages = with pkgs; [
+  obsidian
   logseq
+  vscode-fhs
 ];
 
 nixpkgs.config.permittedInsecurePackages = [
