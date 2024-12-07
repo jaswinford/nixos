@@ -26,6 +26,10 @@
           id = "default";
           devices = [ "IEL-100123" "Freyr" "Adam-Cell" "legion"];
         };
+        "${config.services.syncthing.dataDir}/vscode-profile" = {
+          id = "vscode-profile";
+          devices = [ "legion" "Freyr" "IEL-100123" ];
+        };
       };
       devices = {
         legion = {
