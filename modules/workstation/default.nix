@@ -9,6 +9,9 @@ environment.systemPackages = with pkgs; [
   obsidian
 ];
 
+environment.variables = {
+  DONT_PROMPT_WSL_INSTALL = "true";
+};
 home-manager.users.adam = {
   programs.vscode = {
     enable = true;
