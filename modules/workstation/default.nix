@@ -25,6 +25,9 @@ home-manager.users.adam = {
       ms-python.pylint
       sourcery.sourcery
     ];
+    userSettings = {
+      "git.confirmSync" = false;
+    };
   };
 };
 nixpkgs.config.permittedInsecurePackages = [
