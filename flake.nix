@@ -25,7 +25,6 @@
       stylix.nixosModules.stylix
       home-manager.nixosModules.home-manager
       agenix.nixosModules.default
-
       ./modules/global/global.nix
       ./modules/stylix
       ./modules/neovim
@@ -34,6 +33,7 @@
       ./modules/zsh
       ./users/adam
       ./scripts
+      ./groups
     ];
   in {
     nixosConfigurations = {
