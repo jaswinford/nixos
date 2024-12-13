@@ -41,13 +41,13 @@
     statdPort = 4000;
 
     exports = ''
-    /export             100.0.0.0/24(rw,sync,no_subtree_check,crossmnt,fsid=0)
-    /export/tvshows     100.0.0.0/24(rw,sync,no_subtree_check)
-    /export/movies      100.0.0.0/24(rw,sync,no_subtree_check)
-    /export/music       100.0.0.0/24(rw,sync,no_subtree_check)
-    /export/books       100.0.0.0/24(rw,sync,no_subtree_check)
-    /export/audiobooks  100.0.0.0/24(rw,sync,no_subtree_check)
-    /export/downloads   100.0.0.0/24(rw,sync,no_subtree_check)
+    /export             10.0.1.0/24(rw,sync,no_subtree_check,crossmnt,fsid=0)
+    /export/tvshows     10.0.1.0/24(rw,sync,no_subtree_check)
+    /export/movies      10.0.1.0/24(rw,sync,no_subtree_check)
+    /export/music       10.0.1.0/24(rw,sync,no_subtree_check)
+    /export/books       10.0.1.0/24(rw,sync,no_subtree_check)
+    /export/audiobooks  10.0.1.0/24(rw,sync,no_subtree_check)
+    /export/downloads   10.0.1.0/24(rw,sync,no_subtree_check)
     '';
   };
 
