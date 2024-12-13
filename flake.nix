@@ -66,6 +66,7 @@
             "${self}/modules/sunshine"
             "${self}/modules/workstation"
             ./modules/syncthing
+            ./modules/nfs-client
           ];
       };
       # Work WSL instance
