@@ -40,7 +40,7 @@
 
   system.stateVersion = "24.05"; # Did you read the comment?
   # services.syncthing = {
-    # key = "${config.age.secrets.syncthing-key.path}";
-    # cert = "${config.age.secrets.syncthing-cert.path}";
+  # key = "${config.age.secrets.syncthing-key.path}";
+  # cert = "${config.age.secrets.syncthing-cert.path}";
   # };
 }
