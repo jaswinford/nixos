@@ -25,7 +25,7 @@
       stylix.nixosModules.stylix
       home-manager.nixosModules.home-manager
       agenix.nixosModules.default
-      ./modules/syncthing
+      
       ./modules/global/global.nix
       ./modules/stylix
       ./modules/neovim
@@ -50,6 +50,7 @@
             "${self}/modules/wireless"
             "${self}/modules/tailscale"
             "${self}/modules/workstation"
+            ./modules/syncthing
           ];
       };
       wx-001 = inputs.nixpkgs.lib.nixosSystem {
@@ -64,6 +65,7 @@
             "${self}/modules/tailscale"
             "${self}/modules/sunshine"
             "${self}/modules/workstation"
+            ./modules/syncthing
           ];
       };
       # Work WSL instance
@@ -80,6 +82,7 @@
             "${self}/modules/devops"
             "${self}/modules/tailscale"
             "${self}/modules/workstation"
+            ./modules/syncthing
           ];
       };
       # Servers
