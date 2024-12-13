@@ -11,6 +11,7 @@ age.secrets.rpc-token = {
 
 networking.firewall.allowedTCPPorts = [
   80
+  6800
 ];
 
 # Enable web server for webui
@@ -26,6 +27,8 @@ services.aria2 = {
   enable = true;
   settings = {
     enable-rpc = true;
+    rpc-allow-origin-all = true;
+    rpc-listen-all = true;
     dir = "/mnt/downloads";
   };
   rpcSecretFile = config.age.secrets.rpc-token.path;
