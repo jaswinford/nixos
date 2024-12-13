@@ -4,7 +4,6 @@
   pkgs,
   ...
 }: {
-
   fileSystems."/mnt/tvshows" = {
     device = "fs01:/tvshows";
     fsType = "nfs";

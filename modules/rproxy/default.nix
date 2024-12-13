@@ -73,9 +73,9 @@
         locations."/".proxyPass = "http://10.0.1.5:8222";
       };
     "nextcloud.jadam.space" =
-     SSL
-    // {
-      locations."/".proxyPass = "http://10.0.1.20";
+      SSL
+      // {
+        locations."/".proxyPass = "http://10.0.1.20";
         locations."/".extraConfig = ''
           proxy_set_header Host $host;
           proxy_set_header X-Real-IP $remote_addr;
@@ -84,13 +84,13 @@
           proxy_set_header X-Forwarded-Protocol $scheme;
           proxy_set_header X-Forwarded-Host $http_host;
           proxy_buffering off;'';
-    };
+      };
     # "pve.jadam.space" =
-      # SSL
-      # // {
-        # locations."/".proxyPass = "https://10.0.1.6:8006";
-        # locations."/".proxyWebsockets = true;
-      # };
+    # SSL
+    # // {
+    # locations."/".proxyPass = "https://10.0.1.6:8006";
+    # locations."/".proxyWebsockets = true;
+    # };
     "5etools.jadam.space" =
       SSL
       // {

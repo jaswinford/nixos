@@ -70,6 +70,6 @@
     externalInterface = "enp3s0";
     enableIPv6 = true;
   };
-  
+
   system.stateVersion = "24.05"; # Don't change unless needed to fix something.
 }

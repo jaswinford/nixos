@@ -152,6 +152,7 @@
             {environment.systemPackages = [inputs.agenix.packages."x86_64-linux".default];}
             "${self}/machines/lxc"
             "${self}/modules/aria2"
+            "${self}/modules/tailscale"
             ./modules/nfs-client
           ];
       };
