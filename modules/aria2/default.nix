@@ -26,7 +26,7 @@ services.aria2 = {
   enable = true;
   settings = {
     enable-rpc = true;
-    dir = "/var/lib/aria2/Downloads";
+    dir = "/mnt/downloads";
   };
   rpcSecretFile = config.age.secrets.rpc-token.path;
   openPorts = true;

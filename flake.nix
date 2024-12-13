@@ -152,6 +152,7 @@
             {environment.systemPackages = [inputs.agenix.packages."x86_64-linux".default];}
             "${self}/machines/lxc"
             "${self}/modules/aria2"
+            ./modules/nfs-client
           ];
       };
       fs01 = inputs.nixpkgs.lib.nixosSystem {
