@@ -150,6 +150,17 @@
             "${self}/modules/aria2"
           ];
       };
+      fs01 = inputs.nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        modules =
+          globalModules
+          ++ [
+            {networking.hostName = "fs01";}
+            {environment.systemPackages = [inputs.agenix.packages."x86_64-linux".default];}
+            "${self}/machines/lxc"
+            "${self}/modules/nfs-server"
+          ];
+      };
     };
   };
 }
