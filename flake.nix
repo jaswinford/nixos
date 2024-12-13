@@ -25,7 +25,7 @@
       stylix.nixosModules.stylix
       home-manager.nixosModules.home-manager
       agenix.nixosModules.default
-      
+
       ./modules/global/global.nix
       ./modules/stylix
       ./modules/neovim
@@ -143,7 +143,7 @@
             "${self}/modules/5etools"
           ];
       };
-       aria = inputs.nixpkgs.lib.nixosSystem {
+      aria = inputs.nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules =
           globalModules
