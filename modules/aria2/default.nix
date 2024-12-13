@@ -21,6 +21,10 @@
     };
   };
 
+  users.extraUsers.aria2.extraGroups = [
+    media
+  ];
+
   # Enable Aira2 downlod manager and turn on RPC service
   services.aria2 = {
     enable = true;
