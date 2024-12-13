@@ -22,7 +22,7 @@
   };
 
   users.extraUsers.aria2.extraGroups = [
-    media
+    1023
   ];
 
   # Enable Aira2 downlod manager and turn on RPC service
