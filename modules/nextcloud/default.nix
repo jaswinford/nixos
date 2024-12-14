@@ -14,6 +14,9 @@
     };
   };
 
+  networking.hosts = { 
+    "10.0.1.108" = [ "fs01" "fs01.jadam.local" ];
+  };
   environment.systemPackages = with pkgs; [
     exiftool
     ffmpeg_6-headless
