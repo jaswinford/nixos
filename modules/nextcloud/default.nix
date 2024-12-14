@@ -59,6 +59,7 @@
       default_phone_region = "US";
       overwriteprotocol = "https";
       trusted_domains = ["localhost"];
+      config_is_read_only = "true";
     };
     # database.createLocally = true;
     config = {
