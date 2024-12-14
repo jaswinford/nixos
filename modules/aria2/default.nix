@@ -33,6 +33,7 @@
       rpc-allow-origin-all = true;
       rpc-listen-all = true;
       dir = "/mnt/downloads";
+      check-certificate = false;
     };
     rpcSecretFile = config.age.secrets.rpc-token.path;
     openPorts = true;
