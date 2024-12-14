@@ -107,6 +107,7 @@
             {environment.systemPackages = [inputs.agenix.packages."x86_64-linux".default];}
             "${self}/machines/lxc"
             "${self}/modules/nextcloud"
+            ./modules/nfs-client
           ];
       };
       rproxy = inputs.nixpkgs.lib.nixosSystem {

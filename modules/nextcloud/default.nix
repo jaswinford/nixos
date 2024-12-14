@@ -3,6 +3,10 @@
   pkgs,
   ...
 }: {
+
+    users.extraUsers.nextcloud.extraGroups = [
+    "media"
+  ];
   networking = {
     firewall = {
       enable = true;
