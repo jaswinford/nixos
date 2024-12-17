@@ -31,6 +31,7 @@
     gateway = "cincinnati-cooper-rd-ngbnvrjnvt.dynamic-m.com";
     user = "jaswinford@intxlog.com";
     passwordFile = "${config.age.secrets.openconnect-password.path}";
+    protocol = "anyconnect";
   };
 
   networking.search = [
