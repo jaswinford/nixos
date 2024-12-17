@@ -10,5 +10,6 @@
     pkgs.kubernetes-helm
     pkgs.talosctl
     pkgs.kubectl
+    pkgs.nodejs_22
   ];
 }
