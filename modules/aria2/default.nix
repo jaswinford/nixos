@@ -4,33 +4,38 @@
   pkgs,
   ...
 }: {
-
-age.secrets.rpc-token = {
-  file = ../../secrets/aria2-rpc-token.age;
-};
-
-networking.firewall.allowedTCPPorts = [
-  80
-];
-
-# Enable web server for webui
-services.nginx = {
-  enable = true;
-  virtualHosts."downloads.jadam.local" = {
-    root = "/var/www/";
+  age.secrets.rpc-token = {
+    file = ../../secrets/aria2-rpc-token.age;
   };
-};
 
-# Enable Aira2 downlod manager and turn on RPC service
-services.aria2 = {
-  enable = true;
-  settings = {
-    enable-rpc = true;
-    dir = "/var/lib/aria2/Downloads";
+  networking.firewall.allowedTCPPorts = [
+    80
+    6800
+  ];
+
+  # Enable web server for webui
+  services.nginx = {
+    enable = true;
+    virtualHosts."downloads.jadam.local" = {
+      root = "/var/www/";
+    };
   };
-  rpcSecretFile = config.age.secrets.rpc-token.path;
-  openPorts = true;
-};
 
+  users.extraUsers.aria2.extraGroups = [
+    "media"
+  ];
 
+  # Enable Aira2 downlod manager and turn on RPC service
+  services.aria2 = {
+    enable = true;
+    settings = {
+      enable-rpc = true;
+      rpc-allow-origin-all = true;
+      rpc-listen-all = true;
+      dir = "/mnt/downloads";
+      check-certificate = false;
+    };
+    rpcSecretFile = config.age.secrets.rpc-token.path;
+    openPorts = true;
+  };
 }

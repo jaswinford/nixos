@@ -24,11 +24,11 @@
         };
         "${config.services.syncthing.dataDir}/Sync" = {
           id = "default";
-          devices = [ "IEL-100123" "Freyr" "Adam-Cell" "legion"];
+          devices = ["IEL-100123" "Freyr" "Adam-Cell" "legion"];
         };
         "${config.services.syncthing.dataDir}/vscode-profile" = {
           id = "vscode-profile";
-          devices = [ "legion" "Freyr" "IEL-100123" ];
+          devices = ["legion" "Freyr" "IEL-100123"];
         };
       };
       devices = {
@@ -53,7 +53,7 @@
           ];
           autoAcceptFolders = true;
         };
-        Adam-Cell = { 
+        Adam-Cell = {
           id = "67QZ2EE-7WP3ZTG-PIIK2JU-WVXDQQA-N5YXFOS-LIN6NGI-QVIULOP-OOBYUAR";
           addresses = [
             "tcp://100.90.179.11:22000"

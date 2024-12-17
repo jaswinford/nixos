@@ -11,7 +11,7 @@ in {
   "iel-jaswinford-password.age".publicKeys = [adam-IEL IEL-100123];
   "aria2-rpc-token.age".publicKeys = [aria adam-legion adam-Freyr];
   "legion.syncthing.key.age".publicKeys = [legion adam-legion];
-  "legion.syncthing.cert.age".publicKeys = [legion adam-legion];  
+  "legion.syncthing.cert.age".publicKeys = [legion adam-legion];
   "freyr.syncthing.key.age".publicKeys = [Freyr adam-Freyr];
   "freyr.syncthing.cert.age".publicKeys = [Freyr adam-Freyr];
   "IEL-100123.syncthing.key.age".publicKeys = [adam-IEL IEL-100123];

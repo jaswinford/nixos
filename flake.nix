@@ -25,7 +25,6 @@
       stylix.nixosModules.stylix
       home-manager.nixosModules.home-manager
       agenix.nixosModules.default
-      ./modules/syncthing
       ./modules/global/global.nix
       ./modules/stylix
       ./modules/neovim
@@ -34,6 +33,7 @@
       ./modules/zsh
       ./users/adam
       ./scripts
+      ./groups
     ];
   in {
     nixosConfigurations = {
@@ -50,6 +50,7 @@
             "${self}/modules/wireless"
             "${self}/modules/tailscale"
             "${self}/modules/workstation"
+            ./modules/syncthing
           ];
       };
       wx-001 = inputs.nixpkgs.lib.nixosSystem {
@@ -64,6 +65,8 @@
             "${self}/modules/tailscale"
             "${self}/modules/sunshine"
             "${self}/modules/workstation"
+            ./modules/syncthing
+            ./modules/nfs-client
           ];
       };
       # Work WSL instance
@@ -80,6 +83,7 @@
             "${self}/modules/devops"
             "${self}/modules/tailscale"
             "${self}/modules/workstation"
+            ./modules/syncthing
           ];
       };
       # Servers
@@ -103,6 +107,7 @@
             {environment.systemPackages = [inputs.agenix.packages."x86_64-linux".default];}
             "${self}/machines/lxc"
             "${self}/modules/nextcloud"
+            ./modules/nfs-client
           ];
       };
       rproxy = inputs.nixpkgs.lib.nixosSystem {
@@ -139,7 +144,7 @@
             "${self}/modules/5etools"
           ];
       };
-       aria = inputs.nixpkgs.lib.nixosSystem {
+      aria = inputs.nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules =
           globalModules
@@ -148,6 +153,21 @@
             {environment.systemPackages = [inputs.agenix.packages."x86_64-linux".default];}
             "${self}/machines/lxc"
             "${self}/modules/aria2"
+            "${self}/modules/tailscale"
+            ./modules/nfs-client
+            { networking.hosts = { "100.114.232.112" = [ "fs01" "fs01.jadam.local" ];};}
+          ];
+      };
+      fs01 = inputs.nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        modules =
+          globalModules
+          ++ [
+            {networking.hostName = "fs01";}
+            {environment.systemPackages = [inputs.agenix.packages."x86_64-linux".default];}
+            "${self}/machines/lxc"
+            "${self}/modules/nfs-server"
+            "${self}/modules/tailscale"
           ];
       };
     };
