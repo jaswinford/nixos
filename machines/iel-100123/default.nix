@@ -15,6 +15,9 @@
   age.secrets.syncthing-cert = {
     file = ../../secrets/IEL-100123.syncthing.cert.age;
   };
+  age.secrets.openconnect-password = {
+    file = ../../secrets/iel-jaswinford-password.age;
+  };
   wsl.enable = true;
   wsl.defaultUser = "adam";
   wsl.wslConf.network.generateResolvConf = false;
@@ -23,6 +26,13 @@
   networking.nameservers = [
     "10.0.0.2"
   ];
+
+  networking.openconnect.interfaces."openconnect0" = {
+    gateway = "cincinnati-cooper-rd-ngbnvrjnvt.dynamic-m.com";
+    user = "jaswinford@intxlog.com";
+    passwordFile = "${config.age.secrets.openconnect-password.path}";
+    protocol = "anyconnect";
+  };
 
   networking.search = [
     "iel.local"

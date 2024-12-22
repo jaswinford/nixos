@@ -8,6 +8,7 @@ let
   Freyr = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFh6Zsb31NHYk8WhJ7W9CmCBGQOP4/jiAMLMn/SuuxqU root@Freyr";
   IEL-100123 = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILK/Lgc17htGdHHVDvSo42H83uhdTmVTTMPg7aoO3oEQ root@IEL-100123";
 in {
+  "iel-jaswinford-password.age".publicKeys = [adam-IEL IEL-100123];
   "aria2-rpc-token.age".publicKeys = [aria adam-legion adam-Freyr];
   "legion.syncthing.key.age".publicKeys = [legion adam-legion];
   "legion.syncthing.cert.age".publicKeys = [legion adam-legion];
