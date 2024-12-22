@@ -29,6 +29,7 @@
     pinentry-curses
     git
     jq
+    ansible
   ];
   home-manager = {
     backupFileExtension = "bak";
