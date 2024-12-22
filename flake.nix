@@ -177,7 +177,10 @@
           ++ [
             {networking.hostName = "mysql"; }
             {environment.systemPackages = [inputs.agenix.packages."x86_64-linux".default];}
-            {services.mysql.enable = true; }
+            {
+              services.mysql.enable = true; 
+              services.mysql.package = pkgs.mariadb;
+            }
             "${self}/machines/lxc"
           ];
       };
