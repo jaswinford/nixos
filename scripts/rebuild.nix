@@ -1,38 +1,30 @@
 {pkgs}:
 pkgs.writeShellApplication {
   name = "rebuild";
-  runtimeInputs = [pkgs.alejandra pkgs.git pkgs.libnotify];
+  runtimeInputs = [pkgs.alejandra pkgs.libnotify];
   text = ''
-       # A rebuild script that commits on a successful build
-       set -e
+    # A rebuild script that commits on a successful build
+    set -e
 
-       # cd to your config dir
-       pushd /etc/nixos/
+    # cd to your config dir
+    pushd /etc/nixos/
 
-       # Autoformat your nix files
-       alejandra . &>/dev/null
+    # Autoformat your nix files
+    alejandra . &>/dev/null
 
-       # Shows your changes
-       # git diff -U0 *.nix
+    # Shows your changes
+    # git diff -U0 *.nix
 
-       echo "NixOS Rebuilding..."
+    echo "NixOS Rebuilding..."
 
-       # Rebuild, output simplified errors, log trackebacks
-       # sudo nixos-rebuild switch &>nixos-switch.log || (cat nixos-switch.log | grep --color error && false)
-       sudo nixos-rebuild switch
+    # Rebuild, output simplified errors, log trackebacks
+    sudo nixos-rebuild switch | sudo tee nixos-switch.log
+    # sudo nixos-rebuild switch
 
-       # Get current generation metadata
-       current=$(nixos-rebuild list-generations | grep current)
+    # Back to where you were
+    popd
 
-       # Commit all changes witih the generation metadata
-       git commit -am "$current"
-
-    git push
-
-       # Back to where you were
-       popd
-
-       # Notify all OK!
-       notify-send -e "NixOS Rebuilt OK!" --icon=software-update-available
+    # Notify all OK!
+    notify-send -e "NixOS Rebuilt OK!" --icon=software-update-available
   '';
 }
