@@ -25,7 +25,6 @@
         golang.go
         ms-python.python
         ms-python.pylint
-        sourcery.sourcery
         redhat.ansible
       ];
       userSettings = {
