@@ -170,6 +170,17 @@
             "${self}/modules/tailscale"
           ];
       };
+      mysql = inputs.nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        modules = 
+          globalModules
+          ++ [
+            {networking.hostName = "mysql"; }
+            {environment.systemPackages = [inputs.agenix.packages."x86_64-linux".default];}
+            {services.mysql.enable = true; }
+            "${self}/machines/lxc"
+          ]
+      }
     };
   };
 }
