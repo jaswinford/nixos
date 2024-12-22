@@ -179,7 +179,7 @@
             {environment.systemPackages = [inputs.agenix.packages."x86_64-linux".default];}
             {
               services.mysql.enable = true; 
-              services.mysql.package = pkgs.mariadb;
+              services.mysql.package = inputs.nixpkgs.mariadb;
             }
             "${self}/machines/lxc"
           ];
