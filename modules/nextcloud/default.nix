@@ -3,8 +3,7 @@
   pkgs,
   ...
 }: {
-
-    users.extraUsers.nextcloud.extraGroups = [
+  users.extraUsers.nextcloud.extraGroups = [
     "media"
   ];
   networking = {
@@ -14,8 +13,8 @@
     };
   };
 
-  networking.hosts = { 
-    "10.0.1.108" = [ "fs01" "fs01.jadam.local" ];
+  networking.hosts = {
+    "10.0.1.108" = ["fs01" "fs01.jadam.local"];
   };
   environment.systemPackages = with pkgs; [
     exiftool
