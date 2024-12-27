@@ -5,7 +5,7 @@
 }: {
   nix.settings.trusted-users = ["adam"];
   users.users.adam = {
-    extraGroups = ["wheel" "video" "docker" "media" "audio" "pipewire" "libvirtd" "scanner" "lp" "adbuser" "screen"];
+    extraGroups = ["wheel" "video" "docker" "media" "audio" "pipewire" "libvirtd" "scanner" "lp" "adbuser" "screen" "aria2"];
     isNormalUser = true;
     home = "/home/adam";
     createHome = true;
@@ -23,6 +23,7 @@
       rclone
     ];
   };
+
   programs.zsh.enable = true;
   home-manager.users.adam = import ./home.nix;
 }
