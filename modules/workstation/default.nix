@@ -36,10 +36,13 @@
         "update.mode" = "none";
         "database-client.autoSync" = true;
         "database-client.capitalizeKeywordsWhenFormatting" = true;
+        "vs-kubernetes" = {
+          "vs-kubernetes.crd-code-completion" = "enabled";
+        };
       };
     };
+    nixpkgs.config.permittedInsecurePackages = [
+      "electron-27.3.11"
+    ];
   };
-  nixpkgs.config.permittedInsecurePackages = [
-    "electron-27.3.11"
-  ];
 }
