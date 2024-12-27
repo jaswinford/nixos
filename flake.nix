@@ -154,7 +154,6 @@
             "${self}/machines/lxc"
             "${self}/modules/aria2"
             "${self}/modules/tailscale"
-            ./modules/nfs-client
             {networking.hosts = {"100.114.232.112" = ["fs01" "fs01.jadam.local"];};}
           ];
       };
