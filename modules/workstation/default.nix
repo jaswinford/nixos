@@ -6,6 +6,7 @@
 }: {
   environment.systemPackages = with pkgs; [
     obsidian
+    dotnet-sdk
   ];
 
   environment.variables = {
@@ -26,10 +27,15 @@
         ms-python.python
         ms-python.pylint
         redhat.ansible
+        ms-dotnettools.csharp
+        ms-dotnettools.csdevkit
+        ms-dotnettools.vscode-dotnet-runtime
       ];
       userSettings = {
         "git.confirmSync" = false;
         "update.mode" = "none";
+        "database-client.autoSync" = true;
+        "database-client.capitalizeKeywordsWhenFormatting" = true;
       };
     };
   };

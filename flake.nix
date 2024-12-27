@@ -172,10 +172,10 @@
       };
       mysql = inputs.nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
-        modules = 
+        modules =
           globalModules
           ++ [
-            {networking.hostName = "mysql"; }
+            {networking.hostName = "mysql";}
             {environment.systemPackages = [inputs.agenix.packages."x86_64-linux".default];}
             "${self}/modules/mysql"
             "${self}/machines/lxc"
