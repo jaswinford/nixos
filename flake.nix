@@ -67,6 +67,7 @@
             "${self}/modules/workstation"
             ./modules/syncthing
             ./modules/nfs-client
+            ./modules/virt-manager
           ];
       };
       # Work WSL instance
