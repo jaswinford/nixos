@@ -181,6 +181,17 @@
             "${self}/machines/lxc"
           ];
       };
+       gameserver01 = inputs.nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        modules =
+          globalModules
+          ++ [
+            {networking.hostName = "gameserver01";}
+            {environment.systemPackages = [inputs.agenix.packages."x86_64-linux".default];}
+            "${self}/machines/lxc"
+            "${self}/modules/factorio"
+          ];
+      };
     };
   };
 }
