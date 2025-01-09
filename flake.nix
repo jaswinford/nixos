@@ -181,7 +181,7 @@
             "${self}/machines/lxc"
           ];
       };
-       gameserver01 = inputs.nixpkgs.lib.nixosSystem {
+      gameserver01 = inputs.nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules =
           globalModules
