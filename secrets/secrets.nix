@@ -16,6 +16,6 @@ in {
   "freyr.syncthing.cert.age".publicKeys = [Freyr adam-Freyr];
   "IEL-100123.syncthing.key.age".publicKeys = [adam-IEL IEL-100123];
   "IEL-100123.syncthing.cert.age".publicKeys = [adam-IEL IEL-100123];
-  "wireless-keys.age".publicKeys = [adam-Freyr Freyr];
+  "wireless-keys.age".publicKeys = [adam-Freyr Freyr legion adam-legion];
   "openai_api_key.age".publicKeys = [adam-Freyr adam-IEL Freyr IEL-100123];
 }
