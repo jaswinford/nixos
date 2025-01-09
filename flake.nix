@@ -65,9 +65,22 @@
             "${self}/modules/tailscale"
             "${self}/modules/sunshine"
             "${self}/modules/workstation"
+            "${self}/modules/wireless"
             ./modules/syncthing
             ./modules/nfs-client
             ./modules/virt-manager
+            {
+              networking.dhcpcd.extraConfig = ''
+                interface enp3s0
+                metric 100
+
+                interface wlp4s0
+                metric 200
+
+                interface tailscale0
+                metric 42
+              '';
+            }
           ];
       };
       # Work WSL instance
