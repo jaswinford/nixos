@@ -61,7 +61,7 @@
     python3
     screen
     discord
-    bambu-studio
+    # bambu-studio
   ];
 
   networking.nat = {
