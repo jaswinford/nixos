@@ -7,6 +7,7 @@
   environment.systemPackages = with pkgs; [
     obsidian
     dotnet-sdk
+    remmina
   ];
 
   environment.variables = {
