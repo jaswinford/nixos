@@ -11,5 +11,7 @@
     pkgs.talosctl
     pkgs.kubectl
     pkgs.nodejs_22
+    pkgs.terraform
+    pkgs.terraform-ls
   ];
 }
