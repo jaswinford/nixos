@@ -13,6 +13,9 @@
   environment.variables = {
     DONT_PROMPT_WSL_INSTALL = "true";
   };
+  nixpkgs.config.permittedInsecurePackages = [
+    "dotnet-sdk-6.0.428"
+  ];
   home-manager.users.adam = {
     programs.vscode = {
       enable = true;
