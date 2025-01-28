@@ -1,9 +1,4 @@
-{
-  lib,
-  config,
-  pkgs,
-  ...
-}: {
+{config, ...}: {
   age.secrets.rpc-token = {
     file = ../../secrets/aria2-rpc-token.age;
   };

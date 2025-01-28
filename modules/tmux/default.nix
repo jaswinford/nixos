@@ -1,9 +1,4 @@
-{
-  lib,
-  config,
-  pkgs,
-  ...
-}: {
+{pkgs, ...}: {
   # Tmux
   # Almost all of this is customization and should be moved out of system configs
   programs.tmux = {

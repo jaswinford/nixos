@@ -1,9 +1,5 @@
 # Shared home-manager configs for all systems and users
-{
-  config,
-  pkgs,
-  ...
-}: {
+{pkgs, ...}: {
   home.packages = with pkgs; [
     ripgrep
     nixpkgs-fmt

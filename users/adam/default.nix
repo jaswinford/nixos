@@ -1,8 +1,4 @@
-{
-  config,
-  pkgs,
-  ...
-}: {
+{pkgs, ...}: {
   nix.settings.trusted-users = ["adam"];
   users.users.adam = {
     extraGroups = ["wheel" "video" "docker" "media" "audio" "pipewire" "libvirtd" "scanner" "lp" "adbuser" "screen" "aria2"];

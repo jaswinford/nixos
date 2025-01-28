@@ -1,9 +1,5 @@
 # /etc/nixos/wireless.nix
-{
-  config,
-  pkgs,
-  ...
-}: {
+{config, ...}: {
   age.secrets.wireless-keys = {
     file = ../../secrets/wireless-keys.age;
   };

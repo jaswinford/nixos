@@ -1,9 +1,4 @@
-{
-  lib,
-  config,
-  pkgs,
-  ...
-}: {
+{pkgs, ...}: {
   services.displayManager.defaultSession = "none+i3";
   services.xserver = {
     enable = true;

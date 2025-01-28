@@ -1,9 +1,4 @@
-{
-  lib,
-  config,
-  pkgs,
-  ...
-}: {
+{pkgs, ...}: {
   programs.dconf.enable = true;
 
   users.users.adam.extraGroups = ["libvirtd"];

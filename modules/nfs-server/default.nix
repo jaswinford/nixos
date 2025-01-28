@@ -1,9 +1,4 @@
-{
-  lib,
-  config,
-  pkgs,
-  ...
-}: {
+{...}: {
   fileSystems."/export/tvshows" = {
     device = "/mnt/tvshows";
     options = ["bind"];

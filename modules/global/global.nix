@@ -1,11 +1,4 @@
-{
-  lib,
-  config,
-  pkgs,
-  stylix,
-  home-manager,
-  ...
-}: {
+{pkgs, ...}: {
   boot.tmp.useTmpfs = true;
   boot.loader.systemd-boot.configurationLimit = 5;
 

@@ -9,7 +9,7 @@
       noto-fonts-emoji
       maple-mono
       font-awesome
-      terminus-nerdfont
+      nerd-fonts.terminess-ttf
       kanji-stroke-order-font
       liberation_ttf
     ];

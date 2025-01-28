@@ -1,9 +1,4 @@
-{
-  lib,
-  config,
-  pkgs,
-  ...
-}: {
+{pkgs, ...}: {
   environment.systemPackages = [
     (import ./todo.nix {inherit pkgs;})
     (import ./commit.nix {inherit pkgs;})

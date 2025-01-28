@@ -5,7 +5,6 @@
 # https://github.com/nix-community/NixOS-WSL
 {
   config,
-  lib,
   pkgs,
   ...
 }: {
@@ -38,7 +37,7 @@
     "iel.local"
   ];
 
-  environment.systemPackages = with pkgs; [
+  environment.systemPackages = [
   ];
 
   services.pcscd.enable = true;

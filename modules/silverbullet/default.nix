@@ -1,9 +1,4 @@
-{
-  lib,
-  config,
-  pkgs,
-  ...
-}: {
+{...}: {
   services.silverbullet = {
     enable = true;
     spaceDir = "/var/lib/silverbullet";

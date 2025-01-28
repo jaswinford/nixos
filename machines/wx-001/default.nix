@@ -1,6 +1,5 @@
 # Old config for my Gaming workstation. Currently in migration to flakes
 {
-  lib,
   config,
   pkgs,
   ...

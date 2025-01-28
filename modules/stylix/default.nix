@@ -1,10 +1,4 @@
-{
-  lib,
-  config,
-  pkgs,
-  stylix,
-  ...
-}: {
+{pkgs, ...}: {
   stylix.enable = true;
   stylix.autoEnable = true;
   stylix.opacity = {

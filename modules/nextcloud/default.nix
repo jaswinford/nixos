@@ -1,8 +1,4 @@
-{
-  config,
-  pkgs,
-  ...
-}: {
+{pkgs, ...}: {
   users.extraUsers.nextcloud.extraGroups = [
     "media"
   ];

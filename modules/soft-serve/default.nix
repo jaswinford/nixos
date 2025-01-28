@@ -1,9 +1,4 @@
-{
-  lib,
-  config,
-  pkgs,
-  ...
-}: {
+{...}: {
   networking.firewall.allowedTCPPorts = [
     23231
     80
